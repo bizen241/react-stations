@@ -11,7 +11,8 @@ export const App = () => {
   return (
     <div>
       <header>Header</header>
-      <h2>Hello, world!!</h2>
+      <h2>Hello</h2>
+      <img src="./dog.jpg"></img>
     </div>
   )
 }
