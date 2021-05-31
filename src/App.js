@@ -8,11 +8,15 @@ import './App.css'
  * @type {React.FC}
  */
 export const App = () => {
+  const [dogUrl, setDogUrl] = React.useState('./dog1.jpg')
+  const updateUrl = React.useCallback(() => setDogUrl('./dog2.jpg'), [])
+
   return (
     <div>
       <header>Header</header>
       <h2>Hello</h2>
-      <img src="./dog.jpg"></img>
+      <img src={dogUrl}></img>
+      <button onClick={updateUrl}>Button</button>
     </div>
   )
 }
