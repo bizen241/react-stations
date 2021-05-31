@@ -10,6 +10,7 @@ import './App.css'
 export const App = () => {
   return (
     <div>
+      <header>Header</header>
       <h2>Hello, world!!</h2>
     </div>
   )
