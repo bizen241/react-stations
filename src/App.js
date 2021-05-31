@@ -9,7 +9,11 @@ import './App.css'
  */
 export const App = () => {
   const [dogUrl, setDogUrl] = React.useState('./dog1.jpg')
-  const updateUrl = React.useCallback(() => setDogUrl('./dog2.jpg'), [])
+
+  const updateUrl = React.useCallback(async () => {
+    await fetch('https://dog.ceo/api/breeds/image/random')
+    setDogUrl('https://avatars.githubusercontent.com/u/298748')
+  }, [])
 
   return (
     <div>

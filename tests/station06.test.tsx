@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer, { act } from 'react-test-renderer'
 import { App } from '../src/App'
-import { imageUrl, fetchMock } from './mock/fetch'
+import { fetchMock, imageUrl } from './mock/fetch'
 
 describe('<App />', () => {
   const callback = {
@@ -24,7 +24,7 @@ describe('<App />', () => {
     ] as any
   })
 
-  it('fetch() is called and the response value is used', async done => {
+  it('fetch() is called and the response value is used', done => {
     const res = renderer.create(<App />)
     const img = res.root.findByType('img')
     const button = res.root.findByType('button')
