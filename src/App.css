@@ -25,6 +25,10 @@ body {
   font-size: 16px;
   background-color: var(--color-background);
   color: var(--color-font);
+  background-image: linear-gradient(var(--color-content) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-content) 1px, transparent 1px);
+  background-size: 4em 4em;
+  background-position: -2em;
 }
 
 .page__outer {
@@ -45,6 +49,7 @@ body {
   align-items: center;
   width: 100%;
   border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-background);
 }
 
 .page-header__inner-wrapper {
@@ -117,12 +122,27 @@ body {
   background-color: var(--color-button);
 }
 
-.button:hover {
-  opacity: 0.8;
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.button:active,
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  border-top-style: double;
+  border-top-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
 .button:focus {
-  outline: 1px dashed var(--color-border);
+  outline: none;
   outline-offset: 2px;
+}
+
+.button:focus-visible {
+  outline: 2px dashed var(--color-border);
 }
